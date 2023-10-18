@@ -1,0 +1,17 @@
+to install express
+
+npm instal express
+npm install express@<specific version>--save
+
+methods 
+//const app = require("express")() other way of instansiating of server
+
+// method we user
+// app.get
+// app.post
+// app.put
+// app.delete
+// app.all
+// app.use
+// app.listen
+
