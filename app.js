@@ -15,10 +15,17 @@ app.get("/products",(req,res)=>{
         return {id,name}
 
     })
-
-    
     // console.log(newProducts)
     res.json(newProducts)
+})
+
+app.get("/products/:prodid",(req,res)=>{
+    const {prodid} = req.params;
+    console.log(prodid)
+
+    const singleProduct = products.find((product)=> product.id === Number(prodid))
+    console.log(singleProduct)
+    res.json(singleProduct)
 })
 
 
