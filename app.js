@@ -14,8 +14,14 @@ app.get("/", (req,res)=>{
 
 // display the entered data 
 app.post("/login",(req,res)=>{
-    console.log(req.body)
-    res.send("Post")
+    const {name} = req.body
+    // console.log(req.body)
+    if (name) {
+        return res.status(200).send(`welcome ${name}`)
+    }
+
+    res.status(401).send("Please  provide credentials")
+    
 
 })
 
